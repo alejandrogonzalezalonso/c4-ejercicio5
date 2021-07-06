@@ -2,8 +2,12 @@ require ("dotenv").config();
 const fetch = require("node-fetch");
 const express = require("express");
 
-const { getLineasMetro } = require("./api");
 
+const appKey = process.env.APP_KEY;
+const appId = process.env.APP_ID;
+const appURL = process.env.API_URL;
+
+const URL = `${appURL}?app_key=appKey`;
 
 const app = express();
 
